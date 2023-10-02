@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    platform: h2
+    url: ${DB_URL:jdbc:h2:./data/arlepton}
+    username: ${DB_USERNAME:sa}
+    password: ${DB_PASSWORD:sa}
+    continue-on-error: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database: h2
+    database-platform: org.hibernate.dialect.H2Dialect
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
